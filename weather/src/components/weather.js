@@ -13,7 +13,7 @@ const Weather = props => {
                 </Row>
                 <Row className='tempRow'>
                     <Col>
-                        <p>{props.temp_celsius}&deg;</p>
+                        <p>{props.temp}&deg;</p>
                     </Col>
                 </Row>
                 <Row className='maxMinRow' >
@@ -38,14 +38,14 @@ const Weather = props => {
 }
 
 
-function maxminTemp(max, min) {
+function maxminTemp(temp_max, temp_min) {
     return(
         <>
             <span>
-                {max}
+                {temp_max}
             </span>
             <span>
-                {min}
+                {temp_min}
             </span>
         </>
     );

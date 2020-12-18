@@ -16,12 +16,13 @@ class App extends React.Component {
     icon: undefined,
     main: undefined,
     celsius: undefined,
+    temp: undefined,
     temp_max: undefined,
     temp_min: undefined,
     description: '',
     error: false
   };
-  this.getWeather = {};
+  this.getWeather();
 }
 
 
@@ -35,16 +36,23 @@ getWeather = async () => {
 
   this.setState({
     city:response.name,
-    country:response.sys.country
+    country:response.sys.country,
+    temp:response.main.temp,
+    temp_max:response.main.temp_max,
+    temp_min:response.main.temp_min,
+    
   })
 };
 
-  render() {
+render() {
     return (
         <div className='App'>
           <Weather 
           city={this.state.city} 
           country={this.state.country}
+          temp={this.state.temp}
+          temp_max={this.state.temp_max}
+          temp_min={this.state.temp_min}
           />
         </div>
     );
