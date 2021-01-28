@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import './components/weather';
 import 'weather-icons/css/weather-icons.css';
 import Weather from './components/weather';
 
