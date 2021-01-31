@@ -13,7 +13,7 @@ const Weather = props => {
                 </Row>
                 <Row className='tempRow'>
                     <Col>
-                        <p>{props.temp}&deg;</p>
+                        <p>{props.celsius}&deg;</p>
                     </Col>
                 </Row>
                 <Row className='maxMinRow' >
@@ -28,7 +28,7 @@ const Weather = props => {
                 </Row>
                 <Row>
                     <Col>
-                        <p>Light Showers</p>
+                        <p>{props.description}</p>
                     </Col>
                 </Row>
             </Container>
