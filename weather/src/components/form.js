@@ -10,7 +10,12 @@ const Form = props => {
                 <Row>
                     <Col>
                         <form onSubmit={props.loadStats}>
-                            <input type='text' name='gamertag' autoComplete='off' placeholder='Enter Gamertag' />
+                            <input 
+                                type='text' 
+                                name='city' 
+                                autoComplete='off' 
+                                placeholder='Enter City' 
+                            />
                         </form>
                     </Col>
                 </Row>
