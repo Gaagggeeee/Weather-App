@@ -22,7 +22,7 @@ class App extends React.Component {
     description: '',
     error: false
   };
-  this.getWeather();
+
 }
 
 
@@ -41,8 +41,8 @@ countryHandler = (event) => {
 
 getWeather = async (event) => {
 
-  const city = this.cityHandler;
-  const country = this.countryHandler;
+  const city = this.useState('');
+  const country = this.useState('');
 
   if( city && country ) {
 
