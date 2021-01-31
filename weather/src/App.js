@@ -19,6 +19,7 @@ class App extends Component {
       temp_min: undefined,
       celsius: undefined,
       description: '',
+      humidity: undefined,
       error: false
     };
 
@@ -31,6 +32,11 @@ class App extends Component {
   calCelsius(temp){
     let cell = Math.floor(temp - 273.15)
     return cell;
+  }
+
+  calFer(cell){
+    let far = Math.floor(cell * 1.8 - 32)
+    return far;
   }
 
 
@@ -53,10 +59,10 @@ class App extends Component {
       this.setState({
         city: response.name,
         country: response.sys.country,
-        celsius: this.calCelsius(response.main.temp),
+        celsius: this.calFer(response.main.temp),
         temp: response.main.temp,
-        temp_max: this.calCelsius(response.main.temp_max),
-        temp_min: this.calCelsius(response.main.temp_min),
+        temp_max: this.calFer(response.main.temp_max),
+        temp_min: this.calFer(response.main.temp_min),
         humidity: response.main.humidity,
         description: response.weather.[0].description
       });

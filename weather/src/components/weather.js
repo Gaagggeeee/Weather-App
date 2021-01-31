@@ -19,12 +19,13 @@ const Weather = props => {
                 <Row className='maxMinRow' >
                     <Col sm='6'>
 {/* first argument MAX TEMP */}
-                        {maxminTemp(props.temp_max)}
-                    </Col>
-                    <Col sm='6'>
-{/* second argument min TEMP */}
-                        {maxminTemp(props.temp_min)}
-                    </Col>
+                        <div>
+                            {maxminTemp(props.temp_max)}
+                        </div>
+                        <div>
+                            {maxminTemp(props.temp_min)}
+                        </div>
+                    </Col> 
                 </Row>
                 <Row>
                     <Col>
